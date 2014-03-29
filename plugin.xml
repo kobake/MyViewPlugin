@@ -10,5 +10,39 @@
             restorable="true">
       </view>
    </extension>
-
+   
+   <!-- アクション用拡張ポイント -->
+   <!-- ※org.eclipse.ui.viewActions is deprecated -->
+   <!-- ※viewContribution is deprecated -->
+   <!-- ※action is deprecated -->
+   <extension point="org.eclipse.ui.viewActions">
+       <viewContribution id="jp.clockup.viewplugin.viewContribution1"
+           targetID="jp.clockup.viewplugin.ExplorerView">
+           <action class="jp.clockup.viewplugin.DeleteAction"
+               enablesFor="+"
+               icon="icons/delete.gif"
+               id="jp.clockup.viewplugin.DeleteAction"
+               label="ファイルの削除だよ"
+               menubarPath="additions"
+               style="push"
+               toolbarPath="additions">
+           </action>
+       </viewContribution>
+   </extension>
+   
+   <!-- ポップアップメニュー用拡張ポイント -->
+   <!-- ※org.eclipse.ui.popupMenus is deprecated -->
+   <!-- ※viewContribution is deprecated -->
+   <!-- ※action is deprecated -->
+   <extension point="org.eclipse.ui.popupMenus">
+       <viewerContribution id="jp.clockup.viewplugin.viewerContribution1"
+           targetID="jp.clockup.viewplugin.ExplorerView">
+           <action class="jp.clockup.viewplugin.DeleteAction"
+               enablesFor="+"
+               icon="icons/delete.gif"
+               id="jp.clockup.pluginview.DeleteAction"
+               label="ファイルの削除じゃ"
+               menubarPath="additions" />
+       </viewerContribution>
+   </extension>
 </plugin>
