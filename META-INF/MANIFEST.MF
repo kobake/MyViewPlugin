@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Viewplugin
+Bundle-SymbolicName: jp.clockup.viewplugin;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: jp.clockup.viewplugin.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
